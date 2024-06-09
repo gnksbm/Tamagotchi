@@ -9,19 +9,33 @@
 /* Begin PBXBuildFile section */
 		BE47DC8D2C15D55300A802F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC8C2C15D55300A802F4 /* AppDelegate.swift */; };
 		BE47DC8F2C15D55300A802F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC8E2C15D55300A802F4 /* SceneDelegate.swift */; };
-		BE47DC912C15D55300A802F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC902C15D55300A802F4 /* ViewController.swift */; };
+		BE47DC912C15D55300A802F4 /* TamaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC902C15D55300A802F4 /* TamaSelectViewController.swift */; };
 		BE47DC962C15D55500A802F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE47DC952C15D55500A802F4 /* Assets.xcassets */; };
 		BE47DC992C15D55500A802F4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BE47DC982C15D55500A802F4 /* Base */; };
+		BE47DCA82C15D75E00A802F4 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCA72C15D75E00A802F4 /* UIColor+.swift */; };
+		BE47DCAA2C15D7D900A802F4 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCA92C15D7D900A802F4 /* UIFont+.swift */; };
+		BE47DCAC2C15D81600A802F4 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCAB2C15D81600A802F4 /* UIViewController+.swift */; };
+		BE47DCAE2C15D83000A802F4 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCAD2C15D83000A802F4 /* UserDefaultsWrapper.swift */; };
+		BE47DCB02C15D96100A802F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCAF2C15D96100A802F4 /* MainViewController.swift */; };
+		BE47DCB22C15D99900A802F4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCB12C15D99900A802F4 /* SettingViewController.swift */; };
+		BE47DCB42C15D9A500A802F4 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BE47DC892C15D55300A802F4 /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE47DC8C2C15D55300A802F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE47DC8E2C15D55300A802F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE47DC902C15D55300A802F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE47DC902C15D55300A802F4 /* TamaSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaSelectViewController.swift; sourceTree = "<group>"; };
 		BE47DC952C15D55500A802F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE47DC982C15D55500A802F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE47DC9A2C15D55500A802F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE47DCA72C15D75E00A802F4 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		BE47DCA92C15D7D900A802F4 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		BE47DCAB2C15D81600A802F4 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		BE47DCAD2C15D83000A802F4 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		BE47DCAF2C15D96100A802F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BE47DCB12C15D99900A802F4 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +107,8 @@
 		BE47DCA32C15D72300A802F4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				BE47DCAD2C15D83000A802F4 /* UserDefaultsWrapper.swift */,
+				BE47DCA62C15D75600A802F4 /* Extension */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -107,9 +123,22 @@
 		BE47DCA52C15D72B00A802F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BE47DC902C15D55300A802F4 /* ViewController.swift */,
+				BE47DC902C15D55300A802F4 /* TamaSelectViewController.swift */,
+				BE47DCB12C15D99900A802F4 /* SettingViewController.swift */,
+				BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */,
+				BE47DCAF2C15D96100A802F4 /* MainViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BE47DCA62C15D75600A802F4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BE47DCA72C15D75E00A802F4 /* UIColor+.swift */,
+				BE47DCA92C15D7D900A802F4 /* UIFont+.swift */,
+				BE47DCAB2C15D81600A802F4 /* UIViewController+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +211,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE47DC912C15D55300A802F4 /* ViewController.swift in Sources */,
+				BE47DCAE2C15D83000A802F4 /* UserDefaultsWrapper.swift in Sources */,
+				BE47DC912C15D55300A802F4 /* TamaSelectViewController.swift in Sources */,
+				BE47DCA82C15D75E00A802F4 /* UIColor+.swift in Sources */,
+				BE47DCAC2C15D81600A802F4 /* UIViewController+.swift in Sources */,
+				BE47DCAA2C15D7D900A802F4 /* UIFont+.swift in Sources */,
+				BE47DCB22C15D99900A802F4 /* SettingViewController.swift in Sources */,
+				BE47DCB02C15D96100A802F4 /* MainViewController.swift in Sources */,
 				BE47DC8D2C15D55300A802F4 /* AppDelegate.swift in Sources */,
 				BE47DC8F2C15D55300A802F4 /* SceneDelegate.swift in Sources */,
+				BE47DCB42C15D9A500A802F4 /* EditNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

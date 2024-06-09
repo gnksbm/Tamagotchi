@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TamaSelectViewController.swift
 //  Tamagotchi
 //
 //  Created by gnksbm on 6/9/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TamaSelectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
