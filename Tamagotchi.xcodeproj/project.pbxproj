@@ -10,6 +10,7 @@
 		BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */; };
 		BE3FE2F12C19EF1800F58754 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */; };
 		BE3FE2F32C19F3F800F58754 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F22C19F3F800F58754 /* Buildable.swift */; };
+		BE3FE2F62C19F6B600F58754 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BE3FE2F52C19F6B600F58754 /* SnapKit */; };
 		BE47DC8D2C15D55300A802F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC8C2C15D55300A802F4 /* AppDelegate.swift */; };
 		BE47DC8F2C15D55300A802F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC8E2C15D55300A802F4 /* SceneDelegate.swift */; };
 		BE47DC912C15D55300A802F4 /* TamaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC902C15D55300A802F4 /* TamaSelectViewController.swift */; };
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3FE2F62C19F6B600F58754 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +171,9 @@
 			dependencies = (
 			);
 			name = Tamagotchi;
+			packageProductDependencies = (
+				BE3FE2F52C19F6B600F58754 /* SnapKit */,
+			);
 			productName = Tamagotchi;
 			productReference = BE47DC892C15D55300A802F4 /* Tamagotchi.app */;
 			productType = "com.apple.product-type.application";
@@ -197,6 +202,9 @@
 				Base,
 			);
 			mainGroup = BE47DC802C15D55300A802F4;
+			packageReferences = (
+				BE3FE2F42C19F6B600F58754 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = BE47DC8A2C15D55300A802F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -459,6 +467,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE3FE2F42C19F6B600F58754 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE3FE2F52C19F6B600F58754 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE3FE2F42C19F6B600F58754 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE47DC812C15D55300A802F4 /* Project object */;
 }
