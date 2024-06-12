@@ -18,6 +18,10 @@ extension UIViewController {
     var swiftUIView: some View {
         UIViewControllerSwiftUIView(self)
     }
+    
+    var withNavigationSwiftUIView: some View {
+        UINavigationController(rootViewController: self).swiftUIView
+    }
 }
 
 fileprivate struct UIViewControllerSwiftUIView: UIViewControllerRepresentable {

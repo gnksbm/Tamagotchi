@@ -11,6 +11,7 @@
 		BE3FE2F12C19EF1800F58754 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */; };
 		BE3FE2F32C19F3F800F58754 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F22C19F3F800F58754 /* Buildable.swift */; };
 		BE3FE2F62C19F6B600F58754 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BE3FE2F52C19F6B600F58754 /* SnapKit */; };
+		BE3FE2F92C19FB6700F58754 /* TamaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F82C19FB6700F58754 /* TamaCollectionViewCell.swift */; };
 		BE47DC8D2C15D55300A802F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC8C2C15D55300A802F4 /* AppDelegate.swift */; };
 		BE47DC8F2C15D55300A802F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC8E2C15D55300A802F4 /* SceneDelegate.swift */; };
 		BE47DC912C15D55300A802F4 /* TamaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC902C15D55300A802F4 /* TamaSelectViewController.swift */; };
@@ -30,6 +31,7 @@
 		BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPreviewHelper.swift; sourceTree = "<group>"; };
 		BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
 		BE3FE2F22C19F3F800F58754 /* Buildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildable.swift; sourceTree = "<group>"; };
+		BE3FE2F82C19FB6700F58754 /* TamaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaCollectionViewCell.swift; sourceTree = "<group>"; };
 		BE47DC892C15D55300A802F4 /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE47DC8C2C15D55300A802F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE47DC8E2C15D55300A802F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE3FE2F72C19FB5800F58754 /* TamaSelect */ = {
+			isa = PBXGroup;
+			children = (
+				BE47DC902C15D55300A802F4 /* TamaSelectViewController.swift */,
+				BE3FE2F82C19FB6700F58754 /* TamaCollectionViewCell.swift */,
+			);
+			path = TamaSelect;
+			sourceTree = "<group>";
+		};
 		BE47DC802C15D55300A802F4 = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +148,7 @@
 		BE47DCA52C15D72B00A802F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BE47DC902C15D55300A802F4 /* TamaSelectViewController.swift */,
+				BE3FE2F72C19FB5800F58754 /* TamaSelect */,
 				BE47DCB12C15D99900A802F4 /* SettingViewController.swift */,
 				BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */,
 				BE47DCAF2C15D96100A802F4 /* MainViewController.swift */,
@@ -241,6 +252,7 @@
 				BE3FE2F12C19EF1800F58754 /* ReuseIdentifiable.swift in Sources */,
 				BE47DCB22C15D99900A802F4 /* SettingViewController.swift in Sources */,
 				BE47DCB02C15D96100A802F4 /* MainViewController.swift in Sources */,
+				BE3FE2F92C19FB6700F58754 /* TamaCollectionViewCell.swift in Sources */,
 				BE47DC8D2C15D55300A802F4 /* AppDelegate.swift in Sources */,
 				BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */,
 				BE47DC8F2C15D55300A802F4 /* SceneDelegate.swift in Sources */,

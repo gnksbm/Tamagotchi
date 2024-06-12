@@ -14,6 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions
         : [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        UINavigationBar.appearance().backgroundColor = .tamaBackground
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor.tamaForeground
+        ]
+        UINavigationBar.appearance().barTintColor = .tamaForeground
+        UIViewController.defaultUISwizzle()
         return true
     }
     
