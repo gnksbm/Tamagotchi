@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */; };
 		BE3FE2F12C19EF1800F58754 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */; };
+		BE3FE2F32C19F3F800F58754 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F22C19F3F800F58754 /* Buildable.swift */; };
 		BE47DC8D2C15D55300A802F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC8C2C15D55300A802F4 /* AppDelegate.swift */; };
 		BE47DC8F2C15D55300A802F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC8E2C15D55300A802F4 /* SceneDelegate.swift */; };
 		BE47DC912C15D55300A802F4 /* TamaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC902C15D55300A802F4 /* TamaSelectViewController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPreviewHelper.swift; sourceTree = "<group>"; };
 		BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
+		BE3FE2F22C19F3F800F58754 /* Buildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildable.swift; sourceTree = "<group>"; };
 		BE47DC892C15D55300A802F4 /* Tamagotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE47DC8C2C15D55300A802F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE47DC8E2C15D55300A802F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,8 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				BE47DCAD2C15D83000A802F4 /* UserDefaultsWrapper.swift */,
-				BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */,
 				BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */,
+				BE3FE2F22C19F3F800F58754 /* Buildable.swift */,
+				BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */,
 				BE47DCA62C15D75600A802F4 /* Extension */,
 			);
 			path = Utility;
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3FE2F32C19F3F800F58754 /* Buildable.swift in Sources */,
 				BE47DCAE2C15D83000A802F4 /* UserDefaultsWrapper.swift in Sources */,
 				BE47DC912C15D55300A802F4 /* TamaSelectViewController.swift in Sources */,
 				BE47DCA82C15D75E00A802F4 /* UIColor+.swift in Sources */,
