@@ -19,6 +19,7 @@
 		BE47DCB02C15D96100A802F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCAF2C15D96100A802F4 /* MainViewController.swift */; };
 		BE47DCB22C15D99900A802F4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCB12C15D99900A802F4 /* SettingViewController.swift */; };
 		BE47DCB42C15D9A500A802F4 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */; };
+		BE47DCB62C15DADD00A802F4 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCB52C15DADD00A802F4 /* Tamagotchi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BE47DCAF2C15D96100A802F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BE47DCB12C15D99900A802F4 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		BE47DCB52C15DADD00A802F4 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		BE47DCA42C15D72900A802F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BE47DCB52C15DADD00A802F4 /* Tamagotchi.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				BE47DCAE2C15D83000A802F4 /* UserDefaultsWrapper.swift in Sources */,
 				BE47DC912C15D55300A802F4 /* TamaSelectViewController.swift in Sources */,
 				BE47DCA82C15D75E00A802F4 /* UIColor+.swift in Sources */,
+				BE47DCB62C15DADD00A802F4 /* Tamagotchi.swift in Sources */,
 				BE47DCAC2C15D81600A802F4 /* UIViewController+.swift in Sources */,
 				BE47DCAA2C15D7D900A802F4 /* UIFont+.swift in Sources */,
 				BE47DCB22C15D99900A802F4 /* SettingViewController.swift in Sources */,
