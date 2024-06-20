@@ -7,4 +7,4 @@
 
 import UIKit
 
-final class EditNameViewController: UIViewController { }
+final class EditNameViewController: BaseViewController { }

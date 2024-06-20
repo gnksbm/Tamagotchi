@@ -25,6 +25,7 @@
 		BE47DCB22C15D99900A802F4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCB12C15D99900A802F4 /* SettingViewController.swift */; };
 		BE47DCB42C15D9A500A802F4 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */; };
 		BE47DCB62C15DADD00A802F4 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCB52C15DADD00A802F4 /* Tamagotchi.swift */; };
+		BEBFC3B92C242BBD00F35E82 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBFC3B82C242BBD00F35E82 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		BE47DCB12C15D99900A802F4 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
 		BE47DCB52C15DADD00A802F4 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
+		BEBFC3B82C242BBD00F35E82 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		BE47DCA52C15D72B00A802F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BEBFC3B72C242BB500F35E82 /* Common */,
 				BE3FE2F72C19FB5800F58754 /* TamaSelect */,
 				BE47DCB12C15D99900A802F4 /* SettingViewController.swift */,
 				BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */,
@@ -164,6 +167,14 @@
 				BE47DCAB2C15D81600A802F4 /* UIViewController+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BEBFC3B72C242BB500F35E82 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BEBFC3B82C242BBD00F35E82 /* BaseViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 				BE3FE2F92C19FB6700F58754 /* TamaCollectionViewCell.swift in Sources */,
 				BE47DC8D2C15D55300A802F4 /* AppDelegate.swift in Sources */,
 				BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */,
+				BEBFC3B92C242BBD00F35E82 /* BaseViewController.swift in Sources */,
 				BE47DC8F2C15D55300A802F4 /* SceneDelegate.swift in Sources */,
 				BE47DCB42C15D9A500A802F4 /* EditNameViewController.swift in Sources */,
 			);

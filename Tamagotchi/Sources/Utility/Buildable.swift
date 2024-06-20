@@ -13,7 +13,7 @@ extension Buildable where Self: NSObject {
     func build(
         _ block: ((_ builder: Builder<Self>) -> Builder<Self>)
     ) -> Self {
-        block(Builder(self)).build()
+        block(Builder(self)).finalize()
     }
 }
 
@@ -38,12 +38,12 @@ struct Builder<Base: AnyObject> {
         }
     }
     
-    func action(_ block: (Base) -> Void) -> Builder<Base> {
+    func capture(_ block: (_ base: Base) -> Void) -> Builder<Base> {
         block(base)
         return Builder(base)
     }
     
-    func build() -> Base {
+    fileprivate func finalize() -> Base {
         base
     }
 }

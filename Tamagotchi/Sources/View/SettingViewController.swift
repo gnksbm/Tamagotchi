@@ -7,4 +7,4 @@
 
 import UIKit
 
-final class SettingViewController: UIViewController { }
+final class SettingViewController: BaseViewController { }

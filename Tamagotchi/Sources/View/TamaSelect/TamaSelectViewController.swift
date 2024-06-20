@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-class TamaSelectViewController: UIViewController {
+class TamaSelectViewController: BaseViewController {
     private var dataSource: TamaSelectDataSource!
     
     private lazy var collectionView = UICollectionView(
@@ -17,7 +17,7 @@ class TamaSelectViewController: UIViewController {
         collectionViewLayout: makeLayout()
     ).build { builder in
         builder.backgroundColor(.tamaBackground)
-            .action { $0.register(TamaCollectionViewCell.self) }
+            .capture { $0.register(TamaCollectionViewCell.self) }
         
     }
     

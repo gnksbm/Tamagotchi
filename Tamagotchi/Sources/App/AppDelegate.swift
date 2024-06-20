@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .foregroundColor: UIColor.tamaForeground
         ]
         UINavigationBar.appearance().barTintColor = .tamaForeground
-        UIViewController.defaultUISwizzle()
         return true
     }
     
