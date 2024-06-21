@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EBECA022C256144003DDF07 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8EBECA012C256144003DDF07 /* .gitignore */; };
 		BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */; };
 		BE3FE2F12C19EF1800F58754 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */; };
 		BE3FE2F32C19F3F800F58754 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F22C19F3F800F58754 /* Buildable.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8EBECA012C256144003DDF07 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPreviewHelper.swift; sourceTree = "<group>"; };
 		BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
 		BE3FE2F22C19F3F800F58754 /* Buildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildable.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		BE47DC802C15D55300A802F4 = {
 			isa = PBXGroup;
 			children = (
+				8EBECA012C256144003DDF07 /* .gitignore */,
 				BE47DC8B2C15D55300A802F4 /* Tamagotchi */,
 				BE47DC8A2C15D55300A802F4 /* Products */,
 			);
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE47DC962C15D55500A802F4 /* Assets.xcassets in Resources */,
+				8EBECA022C256144003DDF07 /* .gitignore in Resources */,
 				BE47DC992C15D55500A802F4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
