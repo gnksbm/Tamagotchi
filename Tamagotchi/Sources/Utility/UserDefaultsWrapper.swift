@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum UserDefaultsKey: String {
+    case isFirstLaunch
+}
+
 @propertyWrapper
 struct UserDefaultsWrapper<T: Codable> {
     private let key: UserDefaultsKey
@@ -46,8 +50,4 @@ struct UserDefaultsWrapper<T: Codable> {
         self.key = key
         self.defaultValue = defaultValue
     }
-}
-
-enum UserDefaultsKey: String {
-    case isFirstLaunch
 }

@@ -5,7 +5,7 @@
 //  Created by gnksbm on 6/13/24.
 //
 
-import Foundation
+import UIKit
 
 protocol Buildable { }
 
@@ -37,6 +37,48 @@ struct Builder<Base: AnyObject> {
             return Builder(base)
         }
     }
+    /// Reference타입 중첩 프로퍼티
+    subscript<Property, NestedProperty>(
+        dynamicMember keyPath: KeyPath<Base, Property>
+    ) -> (_ nestedKeyPath: ReferenceWritableKeyPath<Property, NestedProperty>
+    ) -> (_ newValue: NestedProperty) -> Builder<Base> {
+        { nestedKeyPath in
+            { newValue in
+                base[keyPath: keyPath][keyPath: nestedKeyPath] = newValue
+                return Builder(base)
+            }
+        }
+    }
+    /// Value타입 중첩 프로퍼티
+    subscript<Property, NestedProperty>(
+        dynamicMember keyPath: ReferenceWritableKeyPath<Base, Property>
+    ) -> (_ nestedKeyPath: WritableKeyPath<Property, NestedProperty>
+    ) -> (_ newValue: NestedProperty) -> Builder<Base> {
+        { nestedKeyPath in
+            { newValue in
+                var valueTypeProperty = base[keyPath: keyPath]
+                valueTypeProperty[keyPath: nestedKeyPath] = newValue
+                base[keyPath: keyPath] = valueTypeProperty
+                return Builder(base)
+            }
+        }
+    }
+    /// Value타입 옵셔널 중첩 프로퍼티
+    subscript<Property, NestedProperty>(
+        dynamicMember keyPath: 
+        ReferenceWritableKeyPath<Base, Optional<Property>>
+    ) -> (_ nestedKeyPath: WritableKeyPath<Property, NestedProperty>
+    ) -> (_ newValue: NestedProperty) -> Builder<Base> {
+        { nestedKeyPath in
+            { newValue in
+                var valueTypeProperty: Optional<Property> = 
+                base[keyPath: keyPath]
+                valueTypeProperty?[keyPath: nestedKeyPath] = newValue
+                base[keyPath: keyPath] = valueTypeProperty
+                return Builder(base)
+            }
+        }
+    }
     
     func capture(_ block: (_ base: Base) -> Void) -> Builder<Base> {
         block(base)
@@ -45,5 +87,36 @@ struct Builder<Base: AnyObject> {
     
     fileprivate func finalize() -> Base {
         base
+    }
+}
+
+extension Builder where Base: UIButton {
+    func addTarget(
+        _ target: Any?,
+        action: Selector,
+        for controlEvents: UIControl.Event
+    ) -> Builder<Base> {
+        base.addTarget(target, action: action, for: controlEvents)
+        return self
+    }
+    
+    func attributedTitle(
+        _ title: String,
+        attributes: [NSAttributedString.Key: Any]
+    ) -> Builder<Base> {
+        if base.configuration == nil {
+            let attributedString = NSAttributedString(
+                string: title,
+                attributes: attributes
+            )
+            base.setAttributedTitle(attributedString, for: .normal)
+        } else {
+            var container = AttributeContainer(attributes)
+            base.configuration?.attributedTitle = AttributedString(
+                title,
+                attributes: container
+            )
+        }
+        return self
     }
 }

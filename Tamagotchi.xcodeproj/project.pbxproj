@@ -26,6 +26,8 @@
 		BE47DCB42C15D9A500A802F4 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */; };
 		BE47DCB62C15DADD00A802F4 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DCB52C15DADD00A802F4 /* Tamagotchi.swift */; };
 		BEBFC3B92C242BBD00F35E82 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBFC3B82C242BBD00F35E82 /* BaseViewController.swift */; };
+		BEBFC3BC2C242EFE00F35E82 /* TamaFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBFC3BB2C242EFE00F35E82 /* TamaFeedView.swift */; };
+		BEBFC3C02C2432F100F35E82 /* CGFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBFC3BF2C2432F100F35E82 /* CGFloat+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
 		BE47DCB52C15DADD00A802F4 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 		BEBFC3B82C242BBD00F35E82 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BEBFC3BB2C242EFE00F35E82 /* TamaFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaFeedView.swift; sourceTree = "<group>"; };
+		BEBFC3BF2C2432F100F35E82 /* CGFloat+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,11 +154,11 @@
 		BE47DCA52C15D72B00A802F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BEBFC3B72C242BB500F35E82 /* Common */,
-				BE3FE2F72C19FB5800F58754 /* TamaSelect */,
 				BE47DCB12C15D99900A802F4 /* SettingViewController.swift */,
 				BE47DCB32C15D9A500A802F4 /* EditNameViewController.swift */,
-				BE47DCAF2C15D96100A802F4 /* MainViewController.swift */,
+				BEBFC3BA2C242EFA00F35E82 /* Main */,
+				BE3FE2F72C19FB5800F58754 /* TamaSelect */,
+				BEBFC3B72C242BB500F35E82 /* Common */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +169,7 @@
 				BE47DCA72C15D75E00A802F4 /* UIColor+.swift */,
 				BE47DCA92C15D7D900A802F4 /* UIFont+.swift */,
 				BE47DCAB2C15D81600A802F4 /* UIViewController+.swift */,
+				BEBFC3BF2C2432F100F35E82 /* CGFloat+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -175,6 +180,15 @@
 				BEBFC3B82C242BBD00F35E82 /* BaseViewController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		BEBFC3BA2C242EFA00F35E82 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BE47DCAF2C15D96100A802F4 /* MainViewController.swift */,
+				BEBFC3BB2C242EFE00F35E82 /* TamaFeedView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE3FE2F32C19F3F800F58754 /* Buildable.swift in Sources */,
+				BEBFC3BC2C242EFE00F35E82 /* TamaFeedView.swift in Sources */,
 				BE47DCAE2C15D83000A802F4 /* UserDefaultsWrapper.swift in Sources */,
 				BE47DC912C15D55300A802F4 /* TamaSelectViewController.swift in Sources */,
 				BE47DCA82C15D75E00A802F4 /* UIColor+.swift in Sources */,
@@ -263,6 +278,7 @@
 				BE3FE2F12C19EF1800F58754 /* ReuseIdentifiable.swift in Sources */,
 				BE47DCB22C15D99900A802F4 /* SettingViewController.swift in Sources */,
 				BE47DCB02C15D96100A802F4 /* MainViewController.swift in Sources */,
+				BEBFC3C02C2432F100F35E82 /* CGFloat+.swift in Sources */,
 				BE3FE2F92C19FB6700F58754 /* TamaCollectionViewCell.swift in Sources */,
 				BE47DC8D2C15D55300A802F4 /* AppDelegate.swift in Sources */,
 				BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */,
