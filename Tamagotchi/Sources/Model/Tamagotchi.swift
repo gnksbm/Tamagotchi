@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Tamagotchi: Hashable {
+struct Tamagotchi: Hashable, Codable {
     let id: UUID
     let character: TamaCharacter
     private var level: Int
@@ -30,6 +30,23 @@ struct Tamagotchi: Hashable {
 }
 
 extension Tamagotchi {
+    @UserDefaultsWrapper(key: .captainName, defaultValue: "대장")
+    static var captainName
+    
+    @UserDefaultsWrapper(
+        key: .myTamagotchi,
+        defaultValue: Tamagotchi.defaultMember
+    )
+    static var myTamagotchi
+    
+    var imageName: String {
+        "\(character.imageIndex)-\(level)"
+    }
+    
+    var tamaDescription: String {
+        [visibleLevel, visibleFood, visibleWater].joined(separator: " · ")
+    }
+    
     var visibleLevel: String {
         "LV\(level)"
     }
@@ -69,7 +86,9 @@ extension Tamagotchi {
         Tamagotchi(character: .member2),
         Tamagotchi(character: .member3),
     ]
-    fileprivate static let visibleCount = 31
+    
+    fileprivate static let visibleCount = 30
+    
     fileprivate static func makeEmptyMember() -> Self {
         Tamagotchi(character: .makeEmptyCharacter())
     }
@@ -85,11 +104,12 @@ extension Array where Element == Tamagotchi {
 }
 
 extension Tamagotchi {
-    struct TamaCharacter: Hashable {
+    struct TamaCharacter: Hashable, Codable {
         let name: String
-        let imageName: String
+        let imageIndex: String
         let introduceMessage: String
     }
+    
     enum FeedingType {
         case food, water
     }
@@ -98,24 +118,24 @@ extension Tamagotchi {
 extension Tamagotchi.TamaCharacter {
     static let member1 = Self(
         name: "따끔따끔",
-        imageName: "",
-        introduceMessage: ""
+        imageIndex: "1",
+        introduceMessage: "너무 더워요 물마시고 싶어요"
     )
     static let member2 = Self(
         name: "방실방실",
-        imageName: "",
-        introduceMessage: ""
+        imageIndex: "2",
+        introduceMessage: "배고파요....."
     )
     static let member3 = Self(
         name: "반짝반짝",
-        imageName: "",
-        introduceMessage: ""
+        imageIndex: "3",
+        introduceMessage: "Zzz..."
     )
     
     static func makeEmptyCharacter() -> Self {
         Self(
             name: "준비중이에요",
-            imageName: "",
+            imageIndex: "",
             introduceMessage: ""
         )
     }

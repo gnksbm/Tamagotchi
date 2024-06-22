@@ -11,13 +11,15 @@ import SnapKit
 
 final class TamaFeedView: UIView {
     private let viewType: ViewType
+    
     private lazy var textField = UITextField().build { builder in
-        builder.attributedPlaceholder(
+        builder.textAlignment(.center)
+            .attributedPlaceholder(
             NSAttributedString(
                 string: viewType.typeDescription + "주세용",
                 attributes: [
-                    .font: UIFont.boldSystemFont(ofSize: 13),
-                    .foregroundColor: UIColor.secondaryLabel
+                    .font: UIFont.tamaSmall.with(weight: .bold),
+                    .foregroundColor: UIColor.tertiaryLabel
                 ]
             )
         )
@@ -35,20 +37,18 @@ final class TamaFeedView: UIView {
             .configuration(\.baseBackgroundColor)(.clear)
             .configuration(\.baseForegroundColor)(.tamaForeground)
             .configuration(\.image)(UIImage(systemName: viewType.imageName))
-            .configuration(\.contentInsets)(
-                NSDirectionalEdgeInsets(
-                    top: 10,
-                    leading: 10,
-                    bottom: 10,
-                    trailing: 10
-                )
-            )
+            .configuration(\.contentInsets)(.same(inset: 8))
+            .configuration(\.titlePadding)(0)
             .configuration(\.imagePadding)(5)
             .attributedTitle(
                 viewType.typeDescription + "먹기",
                 attributes: [
-                    .font: UIFont.boldSystemFont(ofSize: 15)
+                    .font: UIFont.tamaMedium.with(weight: .bold)
                 ]
+            )
+            .setContentHuggingPriority(
+                .required,
+                for: .horizontal
             )
     }
     
@@ -69,20 +69,20 @@ final class TamaFeedView: UIView {
             actionButton
         ].forEach { addSubview($0) }
         
-        actionButton.snp.makeConstraints { make in
-            make.centerY.trailing.equalTo(self)
-        }
-        
         textFieldUnderlineView.snp.makeConstraints { make in
-            make.leading.equalTo(self).inset(20)
-            make.trailing.equalTo(actionButton.snp.leading).offset(-20)
-            make.height.equalTo(1)
             make.top.equalTo(textField.snp.bottom).offset(5)
+            make.leading.equalTo(self).inset(10)
+            make.height.equalTo(1)
         }
         
         textField.snp.makeConstraints { make in
             make.centerY.equalTo(self)
             make.horizontalEdges.equalTo(textFieldUnderlineView).inset(20)
+        }
+        
+        actionButton.snp.makeConstraints { make in
+            make.verticalEdges.centerY.trailing.equalTo(self)
+            make.leading.equalTo(textFieldUnderlineView.snp.trailing).offset(10)
         }
     }
 }

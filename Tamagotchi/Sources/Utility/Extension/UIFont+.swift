@@ -11,4 +11,8 @@ extension UIFont {
     static let tamaLarge = UIFont.systemFont(ofSize: 15)
     static let tamaMedium = UIFont.systemFont(ofSize: 14)
     static let tamaSmall = UIFont.systemFont(ofSize: 13)
+    
+    func with(weight: UIFont.Weight) -> UIFont {
+        UIFont.systemFont(ofSize: pointSize, weight: weight)
+    }
 }

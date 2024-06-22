@@ -90,6 +90,30 @@ struct Builder<Base: AnyObject> {
     }
 }
 
+extension Builder where Base: UIView {
+    func setContentHuggingPriority(
+        _ priority: UILayoutPriority,
+        for axis: NSLayoutConstraint.Axis
+    ) -> Builder<Base> {
+        base.setContentHuggingPriority(
+            priority,
+            for: axis
+        )
+        return self
+    }
+    
+    func setContentCompressionResistancePriority(
+        _ priority: UILayoutPriority,
+        for axis: NSLayoutConstraint.Axis
+    ) -> Builder<Base> {
+        base.setContentHuggingPriority(
+            priority,
+            for: axis
+        )
+        return self
+    }
+}
+
 extension Builder where Base: UIButton {
     func addTarget(
         _ target: Any?,

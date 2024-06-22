@@ -18,4 +18,16 @@ extension UIViewController {
         isFirstLaunch ? TamaSelectViewController() : MainViewController()
         #endif
     }
+    
+    func hideKeyboardOnTap() {
+        let gesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(hideKeyboard)
+        )
+        view.addGestureRecognizer(gesture)
+    }
+    
+    @objc private func hideKeyboard() {
+        view.endEditing(true)
+    }
 }

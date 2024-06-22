@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8EBECA022C256144003DDF07 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8EBECA012C256144003DDF07 /* .gitignore */; };
+		8EBECA062C26AB44003DDF07 /* TamaBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBECA052C26AB44003DDF07 /* TamaBubbleView.swift */; };
+		8EBECA082C26AE26003DDF07 /* TamaNameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBECA072C26AE26003DDF07 /* TamaNameLabel.swift */; };
+		8EDCB84B2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB84A2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift */; };
 		BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */; };
 		BE3FE2F12C19EF1800F58754 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */; };
 		BE3FE2F32C19F3F800F58754 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F22C19F3F800F58754 /* Buildable.swift */; };
@@ -33,6 +36,9 @@
 
 /* Begin PBXFileReference section */
 		8EBECA012C256144003DDF07 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8EBECA052C26AB44003DDF07 /* TamaBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaBubbleView.swift; sourceTree = "<group>"; };
+		8EBECA072C26AE26003DDF07 /* TamaNameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaNameLabel.swift; sourceTree = "<group>"; };
+		8EDCB84A2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+.swift"; sourceTree = "<group>"; };
 		BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPreviewHelper.swift; sourceTree = "<group>"; };
 		BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
 		BE3FE2F22C19F3F800F58754 /* Buildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildable.swift; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 				BE47DCA92C15D7D900A802F4 /* UIFont+.swift */,
 				BE47DCAB2C15D81600A802F4 /* UIViewController+.swift */,
 				BEBFC3BF2C2432F100F35E82 /* CGFloat+.swift */,
+				8EDCB84A2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -189,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				BE47DCAF2C15D96100A802F4 /* MainViewController.swift */,
+				8EBECA072C26AE26003DDF07 /* TamaNameLabel.swift */,
+				8EBECA052C26AB44003DDF07 /* TamaBubbleView.swift */,
 				BEBFC3BB2C242EFE00F35E82 /* TamaFeedView.swift */,
 			);
 			path = Main;
@@ -272,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE3FE2F32C19F3F800F58754 /* Buildable.swift in Sources */,
+				8EBECA062C26AB44003DDF07 /* TamaBubbleView.swift in Sources */,
 				BEBFC3BC2C242EFE00F35E82 /* TamaFeedView.swift in Sources */,
 				BE47DCAE2C15D83000A802F4 /* UserDefaultsWrapper.swift in Sources */,
 				BE47DC912C15D55300A802F4 /* TamaSelectViewController.swift in Sources */,
@@ -280,9 +290,11 @@
 				BE47DCAC2C15D81600A802F4 /* UIViewController+.swift in Sources */,
 				BE47DCAA2C15D7D900A802F4 /* UIFont+.swift in Sources */,
 				BE3FE2F12C19EF1800F58754 /* ReuseIdentifiable.swift in Sources */,
+				8EBECA082C26AE26003DDF07 /* TamaNameLabel.swift in Sources */,
 				BE47DCB22C15D99900A802F4 /* SettingViewController.swift in Sources */,
 				BE47DCB02C15D96100A802F4 /* MainViewController.swift in Sources */,
 				BEBFC3C02C2432F100F35E82 /* CGFloat+.swift in Sources */,
+				8EDCB84B2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift in Sources */,
 				BE3FE2F92C19FB6700F58754 /* TamaCollectionViewCell.swift in Sources */,
 				BE47DC8D2C15D55300A802F4 /* AppDelegate.swift in Sources */,
 				BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */,
