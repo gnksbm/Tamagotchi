@@ -17,6 +17,7 @@ class TamaSelectViewController: BaseViewController {
         collectionViewLayout: makeLayout()
     ).build { builder in
         builder.backgroundColor(.tamaBackground)
+            .delegate(self)
             .capture { $0.register(TamaCollectionViewCell.self) }
         
     }
@@ -31,6 +32,7 @@ class TamaSelectViewController: BaseViewController {
     
     private func configureUI() {
         navigationItem.title = "다마고치 선택하기"
+        modalPresentationStyle = .overCurrentContext
     }
     
     private func configureLayout() {
@@ -44,10 +46,12 @@ class TamaSelectViewController: BaseViewController {
             make.edges.equalTo(safeArea)
         }
     }
-    
+}
+
+extension TamaSelectViewController {
     private func updateSnapshot(items: [Tamagotchi]) {
         var snapshot = TamaSelectSnapshot()
-        let allSection = TamaSelectSection.allCases
+        let allSection = CollectionViewSection.allCases
         snapshot.appendSections(allSection)
         allSection.forEach { section in
             switch section {
@@ -69,23 +73,18 @@ class TamaSelectViewController: BaseViewController {
                     heightDimension: .fractionalHeight(1)
                 )
             )
-            item.contentInsets = NSDirectionalEdgeInsets(
-                top: 10,
-                leading: 10,
-                bottom: 10,
-                trailing: 10
-            )
+            item.contentInsets = .same(inset: 15)
             let hGroup = NSCollectionLayoutGroup.horizontal(
                 layoutSize: NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
-                    heightDimension: .fractionalWidth(1/3)
+                    heightDimension: .fractionalWidth(1/3 * 1.2)
                 ),
                 subitems: [item]
             )
             let vGroup = NSCollectionLayoutGroup.vertical(
                 layoutSize: NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
-                    heightDimension: .fractionalWidth(1)
+                    heightDimension: .fractionalWidth(1.2)
                 ),
                 subitems: [hGroup]
             )
@@ -113,20 +112,27 @@ class TamaSelectViewController: BaseViewController {
             cell.configureCell(item: tamagotchi)
         }
     }
-}
-
-extension TamaSelectViewController {
+    
     typealias TamaSelectDataSource =
-    UICollectionViewDiffableDataSource<TamaSelectSection, Tamagotchi>
+    UICollectionViewDiffableDataSource<CollectionViewSection, Tamagotchi>
     
     typealias TamaSelectSnapshot =
-    NSDiffableDataSourceSnapshot<TamaSelectSection, Tamagotchi>
+    NSDiffableDataSourceSnapshot<CollectionViewSection, Tamagotchi>
     
     typealias TamaCellRegistration =
     UICollectionView.CellRegistration<TamaCollectionViewCell, Tamagotchi>
     
-    enum TamaSelectSection: CaseIterable {
+    enum CollectionViewSection: CaseIterable {
         case main
+    }
+}
+
+extension TamaSelectViewController: UICollectionViewDelegate {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        present(UIViewController(), animated: true)
     }
 }
 

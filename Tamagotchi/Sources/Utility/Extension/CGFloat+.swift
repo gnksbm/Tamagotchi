@@ -8,5 +8,6 @@
 import Foundation
 
 extension CGFloat {
+    static let minimum: Self = 4
     static let smallBoxRadius: Self = 8
 }

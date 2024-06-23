@@ -20,7 +20,7 @@ final class MainViewController: BaseViewController {
         builder.image(UIImage(named: tamagotchi.imageName))
     }
     
-    private lazy var tamaNameLabel = TamaNameView().build { builder in
+    private lazy var tamaNameView = TamaNameView().build { builder in
         builder.text("\(tamagotchi.character.name) 다마고치")
     }
     
@@ -64,7 +64,7 @@ final class MainViewController: BaseViewController {
         [
             bubbleView,
             tamaImageView,
-            tamaNameLabel,
+            tamaNameView,
             tamaInfoLabel,
             foodFeedView,
             waterFeedView
@@ -85,14 +85,14 @@ final class MainViewController: BaseViewController {
             make.size.equalTo(safeArea.snp.width).multipliedBy(0.5)
         }
          
-        tamaNameLabel.snp.makeConstraints { make in
+        tamaNameView.snp.makeConstraints { make in
             make.top.equalTo(tamaImageView.snp.bottom).offset(10)
             make.centerX.equalTo(bubbleView)
             make.width.lessThanOrEqualTo(safeArea).multipliedBy(0.9)
         }
         
         tamaInfoLabel.snp.makeConstraints { make in
-            make.top.equalTo(tamaNameLabel.snp.bottom).offset(10)
+            make.top.equalTo(tamaNameView.snp.bottom).offset(10)
             make.centerX.equalTo(bubbleView)
             make.width.lessThanOrEqualTo(safeArea).multipliedBy(0.9)
         }

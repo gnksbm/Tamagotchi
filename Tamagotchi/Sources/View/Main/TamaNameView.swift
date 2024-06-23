@@ -13,8 +13,13 @@ import SnapKit
 final class TamaNameView: UIView {
     private let nameLabel = UILabel().build { builder in
         builder.textAlignment(.center)
+            .numberOfLines(1)
             .textColor(.tamaForeground)
-            .font(.tamaMedium.with(weight: .semibold))
+            .font(.tamaSmall.with(weight: .bold))
+            .setContentCompressionResistancePriority(
+                .required,
+                for: .vertical
+            )
     }
     
     override init(frame: CGRect) {
@@ -41,14 +46,15 @@ final class TamaNameView: UIView {
     private func configureUI() {
         layer.borderWidth = 1
         layer.borderColor = UIColor.tamaForeground.cgColor
-        layer.cornerRadius = .smallBoxRadius
+        layer.cornerRadius = .minimum
+        backgroundColor = .tintColor.withAlphaComponent(0.03)
     }
     
     private func configureLayout() {
         [nameLabel].forEach { addSubview($0) }
         
         nameLabel.snp.makeConstraints { make in
-            make.edges.equalTo(self).inset(10)
+            make.edges.equalTo(self).inset(5)
         }
     }
 }

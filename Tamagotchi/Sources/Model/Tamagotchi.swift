@@ -39,23 +39,29 @@ extension Tamagotchi {
     )
     static var myTamagotchi
     
+    var visibleName: String {
+        character.name.isEmpty ?
+        "준비중이에요" : "\(character.name) 다마고치"
+    }
+    
     var imageName: String {
-        "\(character.imageIndex)-\(level)"
+        character.imageIndex.isEmpty ?
+        "" : "\(character.imageIndex)-\(level)"
     }
     
     var tamaDescription: String {
         [visibleLevel, visibleFood, visibleWater].joined(separator: " · ")
     }
     
-    var visibleLevel: String {
+    private var visibleLevel: String {
         "LV\(level)"
     }
     
-    var visibleFood: String {
+    private var visibleFood: String {
         "밥알 \(foodCount)개"
     }
     
-    var visibleWater: String {
+    private var visibleWater: String {
         "물방울 \(level)개"
     }
     
@@ -134,7 +140,7 @@ extension Tamagotchi.TamaCharacter {
     
     static func makeEmptyCharacter() -> Self {
         Self(
-            name: "준비중이에요",
+            name: "",
             imageIndex: "",
             introduceMessage: ""
         )

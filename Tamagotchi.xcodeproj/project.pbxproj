@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8EBECA022C256144003DDF07 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8EBECA012C256144003DDF07 /* .gitignore */; };
 		8EBECA062C26AB44003DDF07 /* TamaBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBECA052C26AB44003DDF07 /* TamaBubbleView.swift */; };
-		8EBECA082C26AE26003DDF07 /* TamaNameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBECA072C26AE26003DDF07 /* TamaNameLabel.swift */; };
+		8EBECA082C26AE26003DDF07 /* TamaNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBECA072C26AE26003DDF07 /* TamaNameView.swift */; };
 		8EDCB84B2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB84A2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift */; };
 		8EDCB84D2C26C680006F7851 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB84C2C26C680006F7851 /* Appearance.swift */; };
 		BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */; };
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		8EBECA012C256144003DDF07 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8EBECA052C26AB44003DDF07 /* TamaBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaBubbleView.swift; sourceTree = "<group>"; };
-		8EBECA072C26AE26003DDF07 /* TamaNameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaNameLabel.swift; sourceTree = "<group>"; };
+		8EBECA072C26AE26003DDF07 /* TamaNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaNameView.swift; sourceTree = "<group>"; };
 		8EDCB84A2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+.swift"; sourceTree = "<group>"; };
 		8EDCB84C2C26C680006F7851 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPreviewHelper.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				BE47DCAF2C15D96100A802F4 /* MainViewController.swift */,
-				8EBECA072C26AE26003DDF07 /* TamaNameLabel.swift */,
+				8EBECA072C26AE26003DDF07 /* TamaNameView.swift */,
 				8EBECA052C26AB44003DDF07 /* TamaBubbleView.swift */,
 				BEBFC3BB2C242EFE00F35E82 /* TamaFeedView.swift */,
 			);
@@ -294,7 +294,7 @@
 				BE47DCAC2C15D81600A802F4 /* UIViewController+.swift in Sources */,
 				BE47DCAA2C15D7D900A802F4 /* UIFont+.swift in Sources */,
 				BE3FE2F12C19EF1800F58754 /* ReuseIdentifiable.swift in Sources */,
-				8EBECA082C26AE26003DDF07 /* TamaNameLabel.swift in Sources */,
+				8EBECA082C26AE26003DDF07 /* TamaNameView.swift in Sources */,
 				BE47DCB22C15D99900A802F4 /* SettingViewController.swift in Sources */,
 				BE47DCB02C15D96100A802F4 /* MainViewController.swift in Sources */,
 				BEBFC3C02C2432F100F35E82 /* CGFloat+.swift in Sources */,
