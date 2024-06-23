@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 
 class TamaSelectViewController: BaseViewController {
+    private let flow: TamaSelectFlow
     private var dataSource: TamaSelectDataSource!
     
     private lazy var collectionView = UICollectionView(
@@ -22,6 +23,15 @@ class TamaSelectViewController: BaseViewController {
         
     }
     
+    init(flow: TamaSelectFlow) {
+        self.flow = flow
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -31,7 +41,7 @@ class TamaSelectViewController: BaseViewController {
     }
     
     private func configureUI() {
-        navigationItem.title = "다마고치 선택하기"
+        navigationItem.title = "다마고치 \(flow.title)"
     }
     
     private func configureLayout() {
@@ -137,13 +147,21 @@ extension TamaSelectViewController: UICollectionViewDelegate {
         guard !tamagotchi.character.name.isEmpty else { return }
         present(
             TamaDetailViewController(
-                viewMode: .start,
+                flow: flow,
                 tamagotchi: tamagotchi,
                 primaryAction: { [weak self] in
                     guard let self else { return }
                     Tamagotchi.selectedTamaIndex = indexPath.row
-                    UIViewController.isFirstLaunch = false
-                    view.window?.rootViewController = .makeRootVC()
+                    switch flow {
+                    case .start:
+                        UIViewController.isFirstLaunch = false
+                        view.window?.rootViewController = .makeRootVC()
+                    case .edit:
+                        dismiss(animated: true)
+                        navigationController?.popToRootViewController(
+                            animated: true
+                        )
+                    }
                 }
             ),
             animated: true
@@ -155,7 +173,8 @@ extension TamaSelectViewController: UICollectionViewDelegate {
 import SwiftUI
 struct TamaSelectViewControllerPreview: PreviewProvider {
     static var previews: some View {
-        TamaSelectViewController().withNavigationSwiftUIView
+        TamaSelectViewController(flow: .start).withNavigationSwiftUIView
+        TamaSelectViewController(flow: .edit).withNavigationSwiftUIView
     }
 }
 #endif

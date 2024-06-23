@@ -13,9 +13,7 @@ extension UIViewController {
     
     static func makeRootVC() -> UIViewController {
         let viewController = isFirstLaunch ?
-        TamaSelectViewController() : MainViewController(
-            tamagotchi: .selectedTamagotchi
-        )
+        TamaSelectViewController(flow: .start) : MainViewController()
         return UINavigationController(rootViewController: viewController)
     }
     

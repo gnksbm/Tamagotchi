@@ -10,21 +10,21 @@ import UIKit
 import SnapKit
 
 final class TamaDetailViewController: BaseViewController {
-    private let viewMode: TamaDetailView.ViewMode
+    private let flow: TamaSelectFlow
     private let tamagotchi: Tamagotchi
     
-    private lazy var tamaDetailView = TamaDetailView(viewMode: viewMode).build { builder in
+    private lazy var tamaDetailView = TamaDetailView(flow: flow).build { builder in
         builder.capture { base in
             base.updateView(item: tamagotchi)
         }
     }
     
     init(
-        viewMode: TamaDetailView.ViewMode,
+        flow: TamaSelectFlow,
         tamagotchi: Tamagotchi,
         primaryAction: @escaping () -> Void
     ) {
-        self.viewMode = viewMode
+        self.flow = flow
         self.tamagotchi = tamagotchi
         super.init()
         modalPresentationStyle = .overFullScreen
@@ -83,7 +83,7 @@ import SwiftUI
 struct TamaDetailViewControllerPreview: PreviewProvider {
     static var previews: some View {
         TamaDetailViewController(
-            viewMode: .start,
+            flow: .start,
             tamagotchi: .myTamagotchi.first!,
             primaryAction: {
                 

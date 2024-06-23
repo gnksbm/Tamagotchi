@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 final class TamaDetailView: UIView {
-    private let viewMode: ViewMode
+    private let flow: TamaSelectFlow
     
     var primaryAction: () -> Void = { }
     var cancelAction: () -> Void = { }
@@ -39,7 +39,7 @@ final class TamaDetailView: UIView {
     private lazy var primaryButton = UIButton().build { builder in
         builder.configuration(buttonConfiguration)
             .attributedTitle(
-                viewMode.title,
+                flow.title,
                 attributes: [
                     .font: UIFont.tamaLarge
                 ]
@@ -73,8 +73,8 @@ final class TamaDetailView: UIView {
         builder.distribution(.fillEqually)
     }
     
-    init(viewMode: ViewMode) {
-        self.viewMode = viewMode
+    init(flow: TamaSelectFlow) {
+        self.flow = flow
         super.init(frame: .zero)
         configureUI()
         configureLayout()
@@ -156,27 +156,12 @@ final class TamaDetailView: UIView {
     }
 }
 
-extension TamaDetailView {
-    enum ViewMode {
-        case start, edit
-        
-        var title: String {
-            switch self {
-            case .start:
-                "시작하기"
-            case .edit:
-                "변경하기"
-            }
-        }
-    }
-}
-
 #if DEBUG
 import SwiftUI
 struct TamaDetailViewPreview: PreviewProvider {
     static var previews: some View {
         VStack {
-            TamaDetailView(viewMode: .edit).build { builder in
+            TamaDetailView(flow: .edit).build { builder in
                 builder.capture { base in
                     base.updateView(item: .myTamagotchi.first!)
                 }

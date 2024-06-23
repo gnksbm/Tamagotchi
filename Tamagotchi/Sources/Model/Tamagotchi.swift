@@ -46,6 +46,10 @@ extension Tamagotchi {
     )
     static var myTamagotchi
     
+    static func resetSavedData() {
+        UserDefaultsKey.allCases.forEach { $0.removeValue() }
+    }
+    
     var visibleName: String {
         character.name.isEmpty ?
         "준비중이에요" : "\(character.name) 다마고치"

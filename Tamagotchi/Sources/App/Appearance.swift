@@ -22,5 +22,6 @@ enum Appearance {
         }
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().tintColor = .tamaForeground
     }
 }

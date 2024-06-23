@@ -8,45 +8,21 @@
 import UIKit
 
 final class MainViewController: BaseViewController {
-    private let tamagotchi: Tamagotchi
+    private lazy var bubbleView = TamaBubbleView()
     
-    private lazy var bubbleView = TamaBubbleView().build { builder in
-        builder.capture { base in
-            base.updateMessage(tamagotchi.character.introduceMessage)
-        }
-    }
+    private lazy var tamaImageView = UIImageView()
     
-    private lazy var tamaImageView = UIImageView().build { builder in
-        builder.image(UIImage(named: tamagotchi.imageName))
-    }
-    
-    private lazy var tamaNameView = TamaNameView().build { builder in
-        builder.text("\(tamagotchi.character.name) 다마고치")
-    }
+    private lazy var tamaNameView = TamaNameView()
     
     private lazy var tamaInfoLabel = UILabel().build { builder in
         builder.textAlignment(.center)
             .textColor(.tamaForeground)
             .font(.tamaSmall.with(weight: .bold))
-            .text(tamagotchi.tamaDescription)
     }
     
-    private lazy var foodFeedView = TamaFeedView(viewType: .food).build { builder in
-        builder
-    }
+    private lazy var foodFeedView = TamaFeedView(viewType: .food)
     
-    private lazy var waterFeedView = TamaFeedView(viewType: .water).build { builder in
-        builder
-    }
-    
-    init(tamagotchi: Tamagotchi) {
-        self.tamagotchi = tamagotchi
-        super.init()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    private lazy var waterFeedView = TamaFeedView(viewType: .water)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +33,15 @@ final class MainViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        updateView(item: Tamagotchi.selectedTamagotchi)
         navigationItem.title = "\(Tamagotchi.captainName)님의 다마고치"
+    }
+    
+    private func updateView(item: Tamagotchi) {
+        bubbleView.updateMessage(item.character.introduceMessage)
+        tamaImageView.image = UIImage(named: item.imageName)
+        tamaNameView.text = "\(item.character.name) 다마고치"
+        tamaInfoLabel.text = item.tamaDescription
     }
     
     private func configureLayout() {
@@ -122,7 +106,10 @@ final class MainViewController: BaseViewController {
     }
     
     @objc private func profileButtonTapped() {
-        
+        navigationController?.pushViewController(
+            SettingViewController(),
+            animated: true
+        )
     }
 }
 
@@ -130,9 +117,7 @@ final class MainViewController: BaseViewController {
 import SwiftUI
 struct MainViewControllerPreview: PreviewProvider {
     static var previews: some View {
-        MainViewController(
-            tamagotchi: .myTamagotchi.first!
-        ).withNavigationSwiftUIView
+        MainViewController().withNavigationSwiftUIView
     }
 }
 #endif

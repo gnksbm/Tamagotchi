@@ -7,12 +7,20 @@
 
 import Foundation
 
-enum UserDefaultsKey: String {
+enum UserDefaultsKey: String, CaseIterable {
     case isFirstLaunch, captainName, myTamagotchi, selectedTamaIndex
+    
+    func removeValue() {
+        UserDefaultsWrapper<Bool>.removeValue(key: self)
+    }
 }
 
 @propertyWrapper
 struct UserDefaultsWrapper<T: Codable> {
+    static func removeValue(key: UserDefaultsKey) {
+        UserDefaults.standard.removeObject(forKey: key.rawValue)
+    }
+    
     private let key: UserDefaultsKey
     private let defaultValue: T
     
