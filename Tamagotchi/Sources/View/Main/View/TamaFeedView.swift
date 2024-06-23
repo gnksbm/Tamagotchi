@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 
 final class TamaFeedView: UIView {
+    var buttonAction: (String?) -> Void = { _ in }
     private let viewType: ViewType
     
     private lazy var textField = UITextField().build { builder in
@@ -50,6 +51,13 @@ final class TamaFeedView: UIView {
                 .required,
                 for: .horizontal
             )
+            .addTarget(
+                self,
+                action: #selector(
+                    actionButtonTapped
+                ),
+                for: .touchUpInside
+            )
     }
     
     init(viewType: ViewType) {
@@ -84,6 +92,10 @@ final class TamaFeedView: UIView {
             make.verticalEdges.centerY.trailing.equalTo(self)
             make.leading.equalTo(textFieldUnderlineView.snp.trailing).offset(10)
         }
+    }
+    
+    @objc private func actionButtonTapped() {
+        buttonAction(textField.text)
     }
 }
 

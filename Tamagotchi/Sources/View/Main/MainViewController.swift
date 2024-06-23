@@ -34,11 +34,31 @@ final class MainViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateView(item: Tamagotchi.selectedTamagotchi)
+        foodFeedView.buttonAction = { [weak self] value in
+            guard let self else { return }
+            let message = Tamagotchi.feedingFood(text: value)
+            updateView(
+                item: Tamagotchi.selectedTamagotchi,
+                message: message
+            )
+        }
+        waterFeedView.buttonAction = { [weak self] value in
+            guard let self else { return }
+            let message = Tamagotchi.feedingWater(text: value)
+            updateView(
+                item: Tamagotchi.selectedTamagotchi,
+                message: message
+            )
+        }
         navigationItem.title = "\(Tamagotchi.captainName)님의 다마고치"
     }
     
-    private func updateView(item: Tamagotchi) {
-        bubbleView.updateMessage(item.character.introduceMessage)
+    private func updateView(item: Tamagotchi, message: String? = nil) {
+        if let message {
+            bubbleView.updateMessage(message)
+        } else {
+            bubbleView.updateMessage(item.character.introduceMessage)
+        }
         tamaImageView.image = UIImage(named: item.imageName)
         tamaNameView.text = "\(item.character.name) 다마고치"
         tamaInfoLabel.text = item.tamaDescription

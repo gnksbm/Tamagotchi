@@ -46,6 +46,26 @@ extension Tamagotchi {
     )
     static var myTamagotchi
     
+    static func feedingFood(text: String?) -> String {
+        guard let text else { return "알 수 없는 오류입니다" }
+        guard let count = Int(text) else { return "숫자만 입력해주세요" }
+        guard 0..<50 ~= count else { return "0개에서 49개 까지만 먹을 수 있어요" }
+        var updatedTamagotchi = myTamagotchi[selectedTamaIndex]
+        let result = updatedTamagotchi.feedingFood(count: count)
+        myTamagotchi[selectedTamaIndex] = updatedTamagotchi
+        return result
+    }
+    
+    static func feedingWater(text: String?) -> String {
+        guard let text else { return "알 수 없는 오류입니다" }
+        guard let count = Int(text) else { return "숫자만 입력해주세요" }
+        guard 0..<50 ~= count else { return "0개에서 49개 까지만 먹을 수 있어요" }
+        var updatedTamagotchi = myTamagotchi[selectedTamaIndex]
+        let result = updatedTamagotchi.feedingWater(count: count)
+        myTamagotchi[selectedTamaIndex] = updatedTamagotchi
+        return result
+    }
+    
     static func resetSavedData() {
         UserDefaultsKey.allCases.forEach { $0.removeValue() }
     }
@@ -93,7 +113,7 @@ extension Tamagotchi {
     }
     
     private func getFeedingMessage(type: FeedingType, count: Int) -> String {
-        ""
+        Array(repeating: "냠냠", count: count).joined(separator: "...")
     }
 }
 
