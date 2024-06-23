@@ -12,6 +12,8 @@
 		8EBECA082C26AE26003DDF07 /* TamaNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBECA072C26AE26003DDF07 /* TamaNameView.swift */; };
 		8EDCB84B2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB84A2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift */; };
 		8EDCB84D2C26C680006F7851 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB84C2C26C680006F7851 /* Appearance.swift */; };
+		8EDCB84F2C281232006F7851 /* TamaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB84E2C281232006F7851 /* TamaDetailViewController.swift */; };
+		8EDCB8512C281403006F7851 /* TamaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDCB8502C281403006F7851 /* TamaDetailView.swift */; };
 		BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */; };
 		BE3FE2F12C19EF1800F58754 /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */; };
 		BE3FE2F32C19F3F800F58754 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3FE2F22C19F3F800F58754 /* Buildable.swift */; };
@@ -41,6 +43,8 @@
 		8EBECA072C26AE26003DDF07 /* TamaNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaNameView.swift; sourceTree = "<group>"; };
 		8EDCB84A2C26BD2F006F7851 /* NSDirectionalEdgeInsets+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+.swift"; sourceTree = "<group>"; };
 		8EDCB84C2C26C680006F7851 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		8EDCB84E2C281232006F7851 /* TamaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaDetailViewController.swift; sourceTree = "<group>"; };
+		8EDCB8502C281403006F7851 /* TamaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaDetailView.swift; sourceTree = "<group>"; };
 		BE3FE2EE2C19EBE700F58754 /* UIKitPreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitPreviewHelper.swift; sourceTree = "<group>"; };
 		BE3FE2F02C19EF1800F58754 /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
 		BE3FE2F22C19F3F800F58754 /* Buildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildable.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 			children = (
 				BE47DC902C15D55300A802F4 /* TamaSelectViewController.swift */,
 				BE3FE2F82C19FB6700F58754 /* TamaCollectionViewCell.swift */,
+				8EDCB84E2C281232006F7851 /* TamaDetailViewController.swift */,
+				8EDCB8502C281403006F7851 /* TamaDetailView.swift */,
 			);
 			path = TamaSelect;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDCB8512C281403006F7851 /* TamaDetailView.swift in Sources */,
 				BE3FE2F32C19F3F800F58754 /* Buildable.swift in Sources */,
 				8EBECA062C26AB44003DDF07 /* TamaBubbleView.swift in Sources */,
 				BEBFC3BC2C242EFE00F35E82 /* TamaFeedView.swift in Sources */,
@@ -304,6 +311,7 @@
 				BE3FE2EF2C19EBE700F58754 /* UIKitPreviewHelper.swift in Sources */,
 				BEBFC3B92C242BBD00F35E82 /* BaseViewController.swift in Sources */,
 				BE47DC8F2C15D55300A802F4 /* SceneDelegate.swift in Sources */,
+				8EDCB84F2C281232006F7851 /* TamaDetailViewController.swift in Sources */,
 				BE47DCB42C15D9A500A802F4 /* EditNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

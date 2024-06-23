@@ -131,7 +131,7 @@ import SwiftUI
 struct MainViewControllerPreview: PreviewProvider {
     static var previews: some View {
         MainViewController(
-            tamagotchi: .defaultMember.first!
+            tamagotchi: .myTamagotchi.first!
         ).withNavigationSwiftUIView
     }
 }

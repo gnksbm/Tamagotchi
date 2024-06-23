@@ -30,7 +30,7 @@ final class TamaFeedView: UIView {
     }
     
     private lazy var actionButton = UIButton().build { builder in
-        builder.layer(\.cornerRadius)(.smallBoxRadius)
+        builder.layer(\.cornerRadius)(.regularRadius)
             .layer(\.borderWidth)(1)
             .layer(\.borderColor)(UIColor.tamaForeground.cgColor)
             .configuration(.bordered())

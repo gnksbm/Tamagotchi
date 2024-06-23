@@ -64,12 +64,12 @@ struct TamaCollectionViewCellPreview: PreviewProvider {
     static var previews: some View {
         TamaCollectionViewCell().build { builder in
             builder.capture { base in
-                base.configureCell(item: Tamagotchi.defaultMember.addingEmptyMember().last!)
+                base.configureCell(item: Tamagotchi.myTamagotchi.addingEmptyMember().last!)
             }
         }.swiftUIView
         TamaCollectionViewCell().build { builder in
             builder.capture { base in
-                base.configureCell(item: Tamagotchi.defaultMember.first!)
+                base.configureCell(item: Tamagotchi.myTamagotchi.first!)
             }
         }.swiftUIView
     }

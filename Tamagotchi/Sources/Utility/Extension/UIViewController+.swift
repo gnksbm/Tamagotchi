@@ -8,15 +8,15 @@
 import UIKit
 
 extension UIViewController {
-    @UserDefaultsWrapper(key: .isFirstLaunch, defaultValue: false)
+    @UserDefaultsWrapper(key: .isFirstLaunch, defaultValue: true)
     static var isFirstLaunch: Bool
     
-    static func makeRootVC(debuggingVC: UIViewController) -> UIViewController {
-        #if DEBUG
-        debuggingVC
-        #else
-        isFirstLaunch ? TamaSelectViewController() : MainViewController()
-        #endif
+    static func makeRootVC() -> UIViewController {
+        let viewController = isFirstLaunch ?
+        TamaSelectViewController() : MainViewController(
+            tamagotchi: .selectedTamagotchi
+        )
+        return UINavigationController(rootViewController: viewController)
     }
     
     func hideKeyboardOnTap() {

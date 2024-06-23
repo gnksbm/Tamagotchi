@@ -30,6 +30,13 @@ struct Tamagotchi: Hashable, Codable {
 }
 
 extension Tamagotchi {
+    static var selectedTamagotchi: Self {
+        myTamagotchi[selectedTamaIndex]
+    }
+    
+    @UserDefaultsWrapper(key: .selectedTamaIndex, defaultValue: 0)
+    static var selectedTamaIndex
+    
     @UserDefaultsWrapper(key: .captainName, defaultValue: "대장")
     static var captainName
     
@@ -87,7 +94,7 @@ extension Tamagotchi {
 }
 
 extension Tamagotchi {
-    static let defaultMember = [
+    private static let defaultMember = [
         Tamagotchi(character: .member1),
         Tamagotchi(character: .member2),
         Tamagotchi(character: .member3),

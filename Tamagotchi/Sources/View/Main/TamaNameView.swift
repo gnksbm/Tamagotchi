@@ -46,7 +46,7 @@ final class TamaNameView: UIView {
     private func configureUI() {
         layer.borderWidth = 1
         layer.borderColor = UIColor.tamaForeground.cgColor
-        layer.cornerRadius = .minimum
+        layer.cornerRadius = .smallRadius
         backgroundColor = .tintColor.withAlphaComponent(0.03)
     }
     

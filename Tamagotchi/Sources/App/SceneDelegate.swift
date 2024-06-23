@@ -17,11 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let rootVC = UIViewController.makeRootVC(
-            debuggingVC: TamaSelectViewController()
-        )
-        let navController = UINavigationController(rootViewController: rootVC)
-        window?.rootViewController = navController
+        window?.rootViewController = .makeRootVC()
         window?.makeKeyAndVisible()
     }
     

@@ -8,7 +8,7 @@
 import Foundation
 
 enum UserDefaultsKey: String {
-    case isFirstLaunch, captainName, myTamagotchi
+    case isFirstLaunch, captainName, myTamagotchi, selectedTamaIndex
 }
 
 @propertyWrapper

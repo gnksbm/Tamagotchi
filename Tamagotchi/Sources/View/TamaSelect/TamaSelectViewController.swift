@@ -27,12 +27,11 @@ class TamaSelectViewController: BaseViewController {
         configureUI()
         configureLayout()
         configureDataSource()
-        updateSnapshot(items: Tamagotchi.defaultMember)
+        updateSnapshot(items: Tamagotchi.myTamagotchi)
     }
     
     private func configureUI() {
         navigationItem.title = "다마고치 선택하기"
-        modalPresentationStyle = .overCurrentContext
     }
     
     private func configureLayout() {
@@ -132,7 +131,23 @@ extension TamaSelectViewController: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        present(UIViewController(), animated: true)
+        let tamagotchi = dataSource
+            .snapshot(for: CollectionViewSection.allCases[indexPath.section])
+            .items[indexPath.row]
+        guard !tamagotchi.character.name.isEmpty else { return }
+        present(
+            TamaDetailViewController(
+                viewMode: .start,
+                tamagotchi: tamagotchi,
+                primaryAction: { [weak self] in
+                    guard let self else { return }
+                    Tamagotchi.selectedTamaIndex = indexPath.row
+                    UIViewController.isFirstLaunch = false
+                    view.window?.rootViewController = .makeRootVC()
+                }
+            ),
+            animated: true
+        )
     }
 }
 
